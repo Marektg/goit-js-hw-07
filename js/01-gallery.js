@@ -1,6 +1,5 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-
 const list = document.querySelector(".gallery");
 // tworzenie galerii
 const photo = galleryItems.map((image) => `<div class="gallery__item">
@@ -20,6 +19,7 @@ list.addEventListener("click", (event) => {
     event.preventDefault();
     modal(event);
 })
+// list.addEventListener("keydown", (event) =>zamknij(event));
 function modal(event) {
 
     const adress = event.target.dataset.source;
@@ -33,4 +33,14 @@ function modal(event) {
     instance.show();
     
 }
+// function zamknij(event) {
+  
+
+//   if (event.key === "Escape") {
+//     const modalWindow = document.querySelectorAll("div.modal");
+//     console.log(modalWindow);
+//     // const mod = modalWindow[0];
+//     modalWindow.close(); 
+//   }
+// }
 console.log(galleryItems);
